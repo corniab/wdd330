@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+html {
+	height: 100vh;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+header,
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: aliceblue;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	background-color: beige;
+}
+
+ol {
+	padding-left: 0;
+}
