@@ -1,0 +1,15 @@
+body {
+	grid-template-rows: auto auto 1fr auto;
+}
+#home-link {
+	background-color: black;
+	display: block;
+	text-align: center;
+	padding: 0.4em;
+	color: white;
+	transition: 0.3s;
+}
+
+#home-link:hover {
+	opacity: 50%;
+}

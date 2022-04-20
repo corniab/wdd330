@@ -3,8 +3,10 @@ const weekNum = window.location.href.slice(-13, -11);
 const layoutTemplate = `
 <header>
 <h1>Week ${weekNum} Notes</h1>
-<a id="home-link" href="/index.html">Home</a>
 </header>
+<nav>
+<a id="home-link" href="/index.html">Home</a>
+</nav>
 <main>
 <ol class="directory"></ol>
 </main>
