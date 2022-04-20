@@ -1,7 +1,7 @@
 const linksArray = [
 	{
 		label: "Week 1 Notes",
-		url: "week1/index.html",
+		url: "/01/index.html",
 	},
 ];
 
