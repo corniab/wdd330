@@ -1,4 +1,4 @@
-const weekNum = window.location.href.slice(-13, -11);
+const weekNum = window.location.href.match(/\d+(?=\/index.html)/g)[0];
 
 const layoutTemplate = `
 <header>
@@ -21,5 +21,3 @@ const layoutTemplate = `
 
 const body = document.querySelector("body");
 body.innerHTML = layoutTemplate;
-
-console.log("hello");

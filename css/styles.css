@@ -1,12 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-html {
+:root {
+	--app-height: 100%;
+}
+
+html,
+body {
+	overflow: hidden;
+	width: 100vw;
 	height: 100vh;
+	height: var(--app-height);
 }
 
 body {
 	font-family: "Roboto", sans-serif;
-	min-height: 100%;
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 }
