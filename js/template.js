@@ -1,4 +1,4 @@
-const weekNum = window.location.href.match(/\d+(?=\/index.html)/g)[0];
+const weekNum = Number(window.location.href.match(/\d+(?=\/index.html)/g)[0]);
 
 const layoutTemplate = `
 <header>
@@ -8,7 +8,7 @@ const layoutTemplate = `
 <a id="home-link" href="../index.html">Home</a>
 </nav>
 <main>
-<ol class="directory"></ol>
+<ol class="notes-list"></ol>
 </main>
 <footer>
 <p>
