@@ -1,13 +1,40 @@
 {
 	"wdd330": [
 		{
-			"chapter": 1,
+			"week": 1,
+			"url": "01/index.html",
+			"notes": [],
 			"links": [
 				{
 					"url": "",
 					"description": ""
 				}
-			]
+			],
+			"application": []
+		},
+		{
+			"week": 2,
+			"url": "02/index.html",
+			"notes": [],
+			"links": [
+				{
+					"url": "",
+					"description": ""
+				}
+			],
+			"application": []
+		},
+		{
+			"week": "x",
+			"url": "",
+			"notes": [],
+			"links": [
+				{
+					"url": "",
+					"description": ""
+				}
+			],
+			"application": []
 		}
 	]
 }

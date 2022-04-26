@@ -8,12 +8,14 @@ const layoutTemplate = `
 <a id="home-link" href="../index.html">Home</a>
 </nav>
 <main>
-<ol class="notes-list"></ol>
+<section class="notes"><h2>Notes</h2><ul class="notes-list"></ul></section>
+<section class="links"><h2>Links</h2><ul class="links-list"></ul></section>
+<section class="application"><h2>Application<h2></h2><pre><code class="language-js"></code></pre></section>
 </main>
 <footer>
 <p>
-	&copy;<span id="year"></span> Ben Cornia |
-	<a href="https://github.com/corniab/wdd330" rel="noreferrer nooperner">Github</a> |
+	&copy;<span id="year"></span> Ben Cornia | 
+	<a href="https://github.com/corniab/wdd330" rel="noreferrer nooperner">Github</a> | 
 	<a href="https://byui.edu/" rel="noreferrer noopener">BYU-I</a>
 </p>
 </footer>

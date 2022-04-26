@@ -1,21 +1,17 @@
-const linksArray = [
-	{
-		label: "Week 1 Notes",
-		url: "01/index.html",
-	},
-];
+const linksArray = fetch("resources/notes.json")
+	.then((response) => response.json())
+	.then((data) => appendLinks(data));
 
 const directory = document.querySelector(".directory");
 
-function appendLinks() {
-	linksArray.forEach((link) => {
+function appendLinks(data) {
+	const notesArray = data.wdd330;
+	notesArray.forEach((note) => {
 		let li = document.createElement("li");
-		li.textContent = link.label;
 		let a = document.createElement("a");
-		a.setAttribute("href", link.url);
-		a.appendChild(li);
-		directory.appendChild(a);
+		a.setAttribute("href", note.url);
+		a.textContent = "Week " + note.week;
+		li.appendChild(a);
+		directory.appendChild(li);
 	});
 }
-
-appendLinks();
