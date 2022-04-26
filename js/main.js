@@ -10,6 +10,7 @@ function appendLinks(data) {
 		let li = document.createElement("li");
 		let a = document.createElement("a");
 		a.setAttribute("href", note.url);
+		a.setAttribute("rel", "noreferrer noopener");
 		a.textContent = "Week " + note.week;
 		li.appendChild(a);
 		directory.appendChild(li);

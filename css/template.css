@@ -13,3 +13,19 @@ body {
 #home-link:hover {
 	opacity: 50%;
 }
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+section h2 {
+	align-self: f;
+}
+
+.section-wrapper {
+	height: 100%;
+	width: min(90vw, 800px);
+}

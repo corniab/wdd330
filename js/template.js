@@ -8,9 +8,11 @@ const layoutTemplate = `
 <a id="home-link" href="../index.html">Home</a>
 </nav>
 <main>
+<div class="section-wrapper">
 <section class="notes"><h2>Notes</h2><ul class="notes-list"></ul></section>
 <section class="links"><h2>Links</h2><ul class="links-list"></ul></section>
-<section class="application"><h2>Application<h2></h2><pre><code class="language-js"></code></pre></section>
+<section class="application"><h2>Application<h2></h2><pre><code class="language-js example-code"></code></pre></section>
+</div>
 </main>
 <footer>
 <p>

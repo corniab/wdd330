@@ -15,14 +15,16 @@
 		{
 			"week": 2,
 			"url": "02/index.html",
-			"notes": [],
+			"notes": [
+				"this is a really long notethis is a really long notethis is a really long notethis is a really long notethis is a really long notethis is a really long note"
+			],
 			"links": [
 				{
-					"url": "",
-					"description": ""
+					"url": "this is a url",
+					"description": "this is a description"
 				}
 			],
-			"application": []
+			"application": ["const name = Ben"]
 		},
 		{
 			"week": "x",
