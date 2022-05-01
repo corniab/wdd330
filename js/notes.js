@@ -36,7 +36,4 @@ function appendLinks(linksArray) {
 function appendExamples(examplesArray) {
 	const applicationCode = document.querySelector(".example-code");
 	applicationCode.textContent = examplesArray.join("");
-	const prism = document.createElement("script");
-	prism.setAttribute("src", "../js/prism.js");
-	document.body.appendChild(prism);
 }

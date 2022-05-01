@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+* {
+	box-sizing: border-box;
+}
+
 :root {
 	--app-height: 100%;
 }
@@ -32,7 +36,8 @@ main {
 	background-color: beige;
 }
 
-ul {
-	list-style: none;
-	padding-left: 0;
+.example-code {
+	background-color: black;
+	color: white;
+	width: 100%;
 }
