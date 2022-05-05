@@ -49,9 +49,25 @@
 			"application": ["See console!"]
 		},
 		{
+			"week": "3",
+			"url": "03/index.html",
+			"notes": [],
+			"links": [
+				{
+					"url": "thisExample/index.html",
+					"description": "Example Code for 'this'"
+				}
+			],
+			"application": []
+		},
+		{
 			"week": "x",
 			"url": "",
-			"notes": [],
+			"notes": [
+				"The value of 'this' is the object the method is being called upon, unless it.",
+				"Unlike many other programming languages, Javascript uses an 'unbound' this (it's value is defined at run-time)",
+				"Arrow functions don't have a 'this'."
+			],
 			"links": [
 				{
 					"url": "",
