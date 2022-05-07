@@ -35,5 +35,5 @@ function appendLinks(linksArray) {
 
 function appendExamples(examplesArray) {
 	const applicationCode = document.querySelector(".example-code");
-	applicationCode.textContent = examplesArray.join("");
+	applicationCode.innerHTML = examplesArray.join("");
 }

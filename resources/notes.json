@@ -49,13 +49,25 @@
 			"application": ["See console!"]
 		},
 		{
-			"week": "3",
+			"week": 3,
 			"url": "03/index.html",
-			"notes": [],
+			"notes": [
+				"Strings are compared character by character using 'lexographical' order. If all the charaters are the same and they are the same length then they are equal. Otherwise the longer string is greater.",
+				"Everything in javascript is a primitive value or an object.",
+				"Objects are mutable."
+			],
 			"links": [
 				{
-					"url": "thisExample/index.html",
+					"url": "this/index.html",
 					"description": "Example Code for 'this'"
+				},
+				{
+					"url": "https://javascript.info/comparison#string-comparison",
+					"description": "How JavaScript compares strings."
+				},
+				{
+					"url": "objects/index.html",
+					"description": "Object Notes"
 				}
 			],
 			"application": []
