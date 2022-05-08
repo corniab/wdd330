@@ -59,15 +59,19 @@
 			"links": [
 				{
 					"url": "this/index.html",
-					"description": "Example Code for 'this'"
-				},
-				{
-					"url": "https://javascript.info/comparison#string-comparison",
-					"description": "How JavaScript compares strings."
+					"description": "This Notes"
 				},
 				{
 					"url": "objects/index.html",
 					"description": "Object Notes"
+				},
+				{
+					"url": "dom/index.html",
+					"description": "Dom Notes"
+				},
+				{
+					"url": "https://javascript.info/comparison#string-comparison",
+					"description": "How JavaScript compares strings."
 				}
 			],
 			"application": []

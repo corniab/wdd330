@@ -1,0 +1,10 @@
+{
+	"ForceUsers": [
+		{ "name": "Luke Skywalker", "team": "Jedi", "lightsaberColor": "blue" },
+		{ "name": "Darth Vader", "team": "Sith", "lightsaberColor": "red" },
+		{ "name": "Mace Windu", "team": "Jedi", "lightsaberColor": "purple" },
+		{ "name": "Ahsoka Tano", "team": "non-affiliated", "lightsaberColor": "white" },
+		{ "name": "Rey Skywalker", "team": "Jedi", "lightsaberColor": "yellow" },
+		{ "name": "Darth Maul", "team": "Sith", "lightsaberColor": "red" }
+	]
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM notes</title>
+		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+		<style>
+			table {
+				border-collapse: collapse;
+				text-align: left;
+			}
+
+			td,
+			th {
+				padding: 1em;
+			}
+			tr:nth-child(even) {
+				background-color: lightblue;
+			}
+			caption {
+				background-color: darkblue;
+				color: white;
+				font-size: 2em;
+			}
+			thead tr {
+				background-color: rgba(255, 242, 0, 0.254);
+			}
+		</style>
+	</head>
+	<body>
+		<p>Take a look in the console!</p>
+		<ul>
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+			<li>List item 4</li>
+			<li>List item 5</li>
+			<li>List item 6</li>
+		</ul>
+		<table>
+			<caption>
+				Force Users
+			</caption>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Team</th>
+					<th>Lightsaber Color</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+		<script src="dom.js"></script>
+	</body>
+</html>
