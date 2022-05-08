@@ -14,7 +14,6 @@ fetch("dom.json")
 
 function buildTable(data) {
 	const tbody = document.querySelector("tbody");
-	console.log(tbody);
 	const forceUsers = data.ForceUsers;
 	forceUsers.forEach((user) => {
 		const row = document.createElement("tr");

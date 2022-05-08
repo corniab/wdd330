@@ -70,6 +70,10 @@
 					"description": "Dom Notes"
 				},
 				{
+					"url": "events/index.html",
+					"description": "Events Notes"
+				},
+				{
 					"url": "https://javascript.info/comparison#string-comparison",
 					"description": "How JavaScript compares strings."
 				}
