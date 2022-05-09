@@ -1,0 +1,32 @@
+{
+	"pages": [
+		{
+			"url": "this/index.html",
+			"description": "This Notes",
+			"notes": [],
+			"links": [],
+			"application": []
+		},
+		{
+			"url": "objects/index.html",
+			"description": "Object Notes",
+			"notes": [],
+			"links": [],
+			"application": []
+		},
+		{
+			"url": "dom/index.html",
+			"description": "Dom Notes",
+			"notes": ["Notes for the dom"],
+			"links": [{ "url": "www.google.com", "description": "google.com" }],
+			"application": []
+		},
+		{
+			"url": "events/index.html",
+			"description": "Events Notes",
+			"notes": [],
+			"links": [],
+			"application": []
+		}
+	]
+}

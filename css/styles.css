@@ -4,10 +4,6 @@
 	box-sizing: border-box;
 }
 
-:root {
-	--app-height: 100%;
-}
-
 html,
 body {
 	height: 100vh;
@@ -31,10 +27,4 @@ main {
 	display: flex;
 	justify-content: center;
 	background-color: beige;
-}
-
-.example-code {
-	background-color: black;
-	color: white;
-	width: 100%;
 }
