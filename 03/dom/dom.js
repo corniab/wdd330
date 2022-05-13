@@ -3,11 +3,14 @@ const listItems = Array.from(document.querySelectorAll("li"));
 console.log(listItems);
 
 // childNodes returns all nodes while children property will ignore text nodes
-const ul = document.querySelector("ul");
+
+const ul = document.createElement("ul");
+const applicationSection = document.querySelector(".application");
+applicationSection.appendChild(ul);
 console.log(ul.childNodes);
 console.log(ul.children);
 
-// Function to create a table from json
+// Function to create a table from jsons
 fetch("dom.json")
 	.then((response) => response.json())
 	.then((data) => buildTable(data));

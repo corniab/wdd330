@@ -8,7 +8,6 @@ function appendData(data) {
 	data = data.wdd330[pageNum - 1];
 	appendNotes(data.notes);
 	appendLinks(data.links);
-	appendExamples(data.application);
 }
 
 function appendNotes(notesArray) {
@@ -31,9 +30,4 @@ function appendLinks(linksArray) {
 		li.appendChild(a);
 		linksList.appendChild(li);
 	});
-}
-
-function appendExamples(examplesArray) {
-	const applicationCode = document.querySelector(".example-code");
-	applicationCode.innerHTML = examplesArray.join("");
 }
