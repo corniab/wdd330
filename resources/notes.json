@@ -88,10 +88,6 @@
 				{
 					"url": "forms/index.html",
 					"description": "Forms Notes"
-				},
-				{
-					"url": "oop/index.html",
-					"description": "Object Oriented Programming Notes"
 				}
 			],
 			"application": []
