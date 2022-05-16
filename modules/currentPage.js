@@ -1,11 +1,11 @@
 import { fetchNotes } from "./fetchNotes.js";
 
-export async function getPage(pages) {
+export async function getPage(path) {
 	const href = location.href;
-	pages = await fetchNotes(pages);
+	let pages = await fetchNotes(path);
 	for (let i = 0; i < pages.length; i++) {
 		let regexp = new RegExp(`${pages[i].url}$`, "");
-		if (regexp.test(href)) return i;
+		if (regexp.test(href)) return pages[i];
 	}
-	return -1;
+	return [-1];
 }

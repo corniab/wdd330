@@ -4,29 +4,29 @@
 			"url": "this/index.html",
 			"description": "This Notes",
 			"notes": [],
-			"links": [],
-			"application": []
+			"links": []
 		},
 		{
 			"url": "objects/index.html",
 			"description": "Object Notes",
 			"notes": [],
-			"links": [],
-			"application": []
+			"links": []
 		},
 		{
 			"url": "dom/index.html",
 			"description": "Dom Notes",
-			"notes": ["Notes for the dom"],
-			"links": [{ "url": "www.google.com", "description": "google.com" }],
-			"application": []
+			"notes": [
+				"Strings are compared character by character using 'lexographical' order. If all the charaters are the same and they are the same length then they are equal. Otherwise the longer string is greater.",
+				"Everything in javascript is a primitive value or an object.",
+				"Objects are mutable."
+			],
+			"links": [{ "url": "www.google.com", "description": "google.com" }]
 		},
 		{
 			"url": "events/index.html",
 			"description": "Events Notes",
 			"notes": [],
-			"links": [],
-			"application": []
+			"links": []
 		}
 	]
 }
