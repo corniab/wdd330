@@ -27,6 +27,10 @@
 			"description": "Events Notes",
 			"notes": [],
 			"links": []
+		},
+		{
+			"url": "https://javascript.info/comparison#string-comparison",
+			"description": "How JavaScript compares strings."
 		}
 	]
 }
