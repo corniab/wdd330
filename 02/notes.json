@@ -1,0 +1,45 @@
+{
+	"pages": [
+		{
+			"url": "arrays/index.html",
+			"description": "Arrays Notes",
+			"notes": [],
+			"links": []
+		},
+		{
+			"url": "basics/index.html",
+			"description": "Basics Notes",
+			"notes": [
+				"Comments can be written either: // or multiline: /*    */",
+				"Primitive data types include string, symbol, number, boolean, undefined, and null",
+				"As of ES6 variable assignment is done with 'let' and 'const'.",
+				"JavaScript is 'loosely typed meaning that you don't have to declare the types of variables.",
+				"An array is an ordered list of values",
+				"Common method arrays include: pop (remove last), push (add to the end), shift (remove from beginning), unshift (add to the beginning)",
+				"Sets are an array-like data structure that doesn't allow for duplicate values.",
+				"Maps are similar to hashes, or hash tables, or dictionaries.",
+				"Maps can use any data type as a key; they have a size property; solely used for storage and retrieval; values can't be accessed directly",
+				"Functions can be declared using function declarations, expressions, arrow notation, or with the function constructor."
+			],
+			"links": [
+				{
+					"url": "https://stackoverflow.com/a/5076962",
+					"description": "What is the difference between null and undefined in JavaScript?, Stack Overflow"
+				},
+				{
+					"url": "https://www.w3schools.com/jsref/jsref_obj_array.asp",
+					"description": "W3 Schools, Array Reference"
+				},
+				{
+					"url": "https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/",
+					"description": "Basics of Hash Tables, Hacker Earth"
+				},
+
+				{
+					"url": "https://eloquentjavascript.net/05_higher_order.html",
+					"description": "Higher-Order Functions, Eloquent Javascript"
+				}
+			]
+		}
+	]
+}

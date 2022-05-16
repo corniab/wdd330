@@ -4,8 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>DOM notes</title>
+		<title>DOM Notes</title>
 		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+		<link rel="stylesheet" href="../../css/styles.css" />
+		<link rel="stylesheet" href="../../css/template.css" />
+		<link rel="stylesheet" href="../../css/week.css" />
 		<style>
 			table {
 				border-collapse: collapse;
@@ -30,28 +33,50 @@
 		</style>
 	</head>
 	<body>
-		<p>Take a look in the console!</p>
-		<ul>
-			<li>List item 1</li>
-			<li>List item 2</li>
-			<li>List item 3</li>
-			<li>List item 4</li>
-			<li>List item 5</li>
-			<li>List item 6</li>
-		</ul>
-		<table>
-			<caption>
-				Force Users
-			</caption>
-			<thead>
-				<tr>
-					<th>Name</th>
-					<th>Team</th>
-					<th>Lightsaber Color</th>
-				</tr>
-			</thead>
-			<tbody></tbody>
-		</table>
-		<script src="dom.js"></script>
+		<header></header>
+		<nav></nav>
+		<main>
+			<div class="section-wrapper">
+				<section class="notes">
+					<h2>Notes</h2>
+					<ul class="notes-list"></ul>
+				</section>
+				<section class="links">
+					<h2>Links</h2>
+					<ul class="links-list"></ul>
+				</section>
+				<section class="application">
+					<h2>Application</h2>
+					<p>Take a look in the console!</p>
+					<ul>
+						<li>List item 1</li>
+						<li>List item 2</li>
+						<li>List item 3</li>
+						<li>List item 4</li>
+						<li>List item 5</li>
+						<li>List item 6</li>
+					</ul>
+					<table>
+						<caption>
+							Force Users
+						</caption>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Team</th>
+								<th>Lightsaber Color</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</section>
+			</div>
+		</main>
+		<footer></footer>
+		<script type="module" src="../../snippets/header.js"></script>
+		<script type="module" src="../../snippets/nav.js"></script>
+		<script type="module" src="../../snippets/footer.js"></script>
+		<script type="module" src="../../modules/notes.js"></script>
+		<script type="module" src="dom.js"></script>
 	</body>
 </html>
