@@ -25,7 +25,12 @@
 		{
 			"url": "events/index.html",
 			"description": "Events Notes",
-			"notes": [],
+			"notes": [
+				"Event propagation is the order that the events fire on each element: there are two kinds bubbling and capturing.",
+				"Bubbling is when the event fires on the element clicked first, then fires on each parent node until it reaches the root",
+				"Capturing works the opposite. Bubbling is the default.",
+				"Event delegation is used to attach an event listener to a parent element in order to capture events that are triggered by its child elements"
+			],
 			"links": []
 		},
 		{
