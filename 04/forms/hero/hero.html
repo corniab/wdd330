@@ -23,11 +23,10 @@
 				Real Name:
 				<input type="password" name="realName" id="realName" />
 			</label>
-			<button type="submit">Submit</button>
 			<p>Super Powers:</p>
 			<label for="flight"
 				>Flight:
-				<input type="checkbox" id="flight" value="flight" name="powers" />
+				<input type="checkbox" id="flight" value="flight" name="powers" checked />
 			</label>
 			<label for="strength"
 				>Super Strength:
@@ -41,6 +40,46 @@
 				>Telekinesis:
 				<input type="checkbox" id="telekinesis" value="telekinesis" name="powers" />
 			</label>
+			<p>What type of hero are you?</p>
+			<label for="hero"
+				>Hero:
+				<input type="radio" name="category" value="Hero" id="hero" checked />
+			</label>
+			<label for="villain"
+				>Villain:
+				<input type="radio" name="category" value="Villain" id="villain" />
+			</label>
+			<label for="anti-hero"
+				>Anti-Hero:
+				<input type="radio" name="category" value="Antihero" id="anti-hero" />
+			</label>
+			<label for="age"
+				>Age
+				<input type="number" name="age" id="age" min="0" step="1" />
+			</label>
+			<label for="City"
+				>Base of Operations:
+				<select name="city" id="city">
+					<option value="" selected>Choose a City</option>
+					<option value="Metropolis">Metropolis</option>
+					<option value="Gotham City">Gotham City</option>
+					<option value="Keystone City">Keystone City</option>
+					<option value="Coast City">Coast City</option>
+					<option value="Star City">Star City</option>
+				</select>
+			</label>
+			<label for="origin"
+				>Origin Story:
+				<textarea
+					placeholder="Born as Kal-El on the planet Krypton..."
+					id="origin"
+					name="origin"
+					rows="20"
+					cols="60"
+				></textarea>
+			</label>
+			<button type="reset">Reset</button>
+			<button type="submit">Submit</button>
 		</form>
 		<script src="main.js"></script>
 	</body>
