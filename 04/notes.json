@@ -18,8 +18,20 @@
 		{
 			"url": "oop/index.html",
 			"description": "Object Oriented Programming Notes",
-			"notes": [],
-			"links": []
+			"notes": [
+				"Static methods are called by the class directly rather than by <b>instances</b> of the class.",
+				"Static methods and properties are not available to instances of the class",
+				"You can add properties and methods after the class declaration using the <pre>prototype</pre> property",
+				"Variables created inside the scope of the constructor are considered to private.",
+				"Use setters and getters to access private variables."
+			],
+
+			"links": [
+				{
+					"url": "https://javascript.info/static-properties-methods",
+					"description": "Static Methods in JavaScript, JavaScipt.info"
+				}
+			]
 		}
 	]
 }

@@ -10,7 +10,7 @@ function appendNotes(notesArray) {
 	const notesList = document.querySelector(".notes-list");
 	notesArray.forEach((note) => {
 		let li = document.createElement("li");
-		li.textContent = note;
+		li.innerHTML = note;
 		notesList.appendChild(li);
 	});
 }
