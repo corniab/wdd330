@@ -37,6 +37,7 @@ body section {
 /***********************TASK VIEW***********************/
 .task-view {
 	width: 100%;
+	border: solid black;
 }
 
 h2 {
@@ -48,12 +49,26 @@ h2 {
 .tasks {
 	list-style: none;
 	padding-left: 0;
+	margin: 0;
+}
+
+.tasks li {
+	border-bottom: solid black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+
+input[type="checkbox"] {
+	margin-right: 1em;
 }
 
 /***********************FILTERS***********************/
 .filters {
 	display: flex;
 	justify-content: space-between;
+	padding: 1em;
 }
 
 /***********************ADD TASK***********************/
