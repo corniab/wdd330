@@ -13,14 +13,14 @@
 			],
 			"links": [
 				{
-					"url": "",
-					"description": ""
+					"url": "todo/index.html",
+					"description": "ToDo App"
 				}
 			]
 		},
 		{
-			"url": "",
-			"description": "",
+			"url": "todo/index.html",
+			"description": "ToDo App",
 			"notes": [],
 			"links": [
 				{
