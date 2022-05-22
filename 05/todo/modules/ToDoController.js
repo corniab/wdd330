@@ -2,16 +2,20 @@ import { ToDoModel } from "./ToDoModel.js";
 import { ToDoView } from "./ToDoView.js";
 
 export class ToDoController {
-	constructor(parentId, filterId) {
+	constructor(parentId, filterId, countId) {
 		this.toDoModel = new ToDoModel("tasks");
 		this.toDoView = new ToDoView(parentId);
 		this.filterId = filterId;
+		this.countId = countId;
 	}
 
 	showToDos() {
 		let checked = document.forms[this.filterId].querySelector("input[name=filter]:checked");
 		const tasks = this.toDoModel.getFilteredTasks(checked.id, "completed");
 		this.toDoView.renderToDoList(tasks);
+
+		// Update the count
+		this.updateCount();
 	}
 
 	addTaskListener(formId) {
@@ -47,5 +51,17 @@ export class ToDoController {
 				this.showToDos();
 			}
 		});
+	}
+
+	updateCount() {
+		let countEl = document.getElementById(this.countId);
+		let plural = document.getElementById("task-plural");
+		countEl.textContent = this.toDoModel.getFilteredTasks("active").length;
+		console.log(Number(countEl.textContent));
+		if (Number(countEl.textContent) != 1) {
+			plural.textContent = "s";
+		} else {
+			plural.textContent = "";
+		}
 	}
 }

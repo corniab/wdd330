@@ -25,7 +25,7 @@ export class ToDoModel {
 		localStorage.setItem(this.arrayName, JSON.stringify(tasks));
 	}
 
-	getFilteredTasks(filter, key) {
+	getFilteredTasks(filter, key = "completed") {
 		let tasks = JSON.parse(localStorage.getItem(this.arrayName));
 		switch (filter) {
 			case "all":
