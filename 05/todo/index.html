@@ -12,25 +12,19 @@
 		<h2>To Do</h2>
 		<section>
 			<div class="task-view">
-				<ul class="tasks">
-					<li>
-						<label>
-							<input type="checkbox" />
-							Hello World
-						</label>
-						<button class="delete">X</button>
-					</li>
-				</ul>
-				<div class="filters">
+				<ul id="tasks"></ul>
+				<div class="filters-wrapper">
 					<div class="task-count"><span>1</span> task<span class="task-plural"></span> left.</div>
-					<div class="all-tasks task-state">All</div>
-					<div class="active-tasks task-state">Active</div>
-					<div class="completed-tasks task-state">Completed</div>
+					<form id="filters">
+						<label for="all"><input type="radio" name="filter" id="all" checked />All</label>
+						<label for="active"><input type="radio" name="filter" id="active" />Active</label>
+						<label for="completed"><input type="radio" name="filter" id="completed" />Completed</label>
+					</form>
 				</div>
 			</div>
-			<form>
-				<label>
-					<input type="text" name="task-input" id="task-input" />
+			<form id="addTask">
+				<label for="taskInput">
+					<input type="text" name="task-input" id="taskInput" />
 				</label>
 				<button type="submit">+</button>
 			</form>

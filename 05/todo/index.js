@@ -1,5 +1,9 @@
-import { ToDoModel } from "./modules/ToDoModel.js";
+import { ToDoController } from "./modules/ToDoController.js";
+const controller = new ToDoController("tasks");
+controller.showToDos();
+controller.addTaskListener("addTask");
+controller.deleteTaskListener("tasks");
+controller.completedTaskListener("tasks");
+controller.filtersListener("filters");
 
-const model = new ToDoModel("tasks");
-
-console.log(model.storage);
+// localStorage.clear();

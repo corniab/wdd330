@@ -1,29 +1,44 @@
 export class ToDoModel {
 	constructor(arrayName) {
 		this.arrayName = arrayName;
-		this.storage = localStorage;
-		this.storage.setItem(this.arrayName, JSON.stringify([]));
+		if (localStorage.getItem("tasks") == null) {
+			localStorage.setItem(arrayName, JSON.stringify([]));
+			this.addTask({ timestamp: "1", content: "hello", completed: false });
+		} else if (JSON.parse(localStorage.getItem("tasks")).length < 1) {
+			this.addTask({ timestamp: "1", content: "hello", completed: false });
+		}
 	}
 
-	addItem(value) {
-		let tasks = JSON.parse(this.storage.getItem(this.arrayName));
-		tasks.push(value);
-		this.storage.setItem(this.arrayName, JSON.stringify(tasks));
+	addTask(task) {
+		let tasks = JSON.parse(localStorage.getItem(this.arrayName));
+		tasks.push(task);
+		localStorage.setItem(this.arrayName, JSON.stringify(tasks));
 	}
 
-	getItem(value) {
-		return JSON.parse(this.storage.getItem(this.arrayName))[value];
+	getAllTasks() {
+		return JSON.parse(localStorage.getItem(this.arrayName));
 	}
 
-	getItems() {
-		return JSON.parse(this.storage.getItem(this.arrayName));
+	removeTask(timestamp) {
+		let tasks = JSON.parse(localStorage.getItem(this.arrayName));
+		tasks = tasks.filter((task) => task.timestamp != timestamp);
+		localStorage.setItem(this.arrayName, JSON.stringify(tasks));
 	}
 
-	removeItem(value) {
-		// let tasks = JSON.parse(this.storage.getItem("tasks"))
-		// tasks.append(value);
-		// this.storage.removeItem(key);
+	getFilteredTasks(filter, value) {
+		let tasks = JSON.parse(localStorage.getItem(this.arrayName));
+		return tasks.filter((task) => task[filter] == value);
 	}
 
-	getAll() {}
+	updateTask(timestamp, completed) {
+		let tasks = JSON.parse(localStorage.getItem(this.arrayName));
+		tasks = tasks.map((task) => {
+			if (task.timestamp == timestamp) {
+				task.completed = completed;
+				return task;
+			}
+			return task;
+		});
+		localStorage.setItem(this.arrayName, JSON.stringify(tasks));
+	}
 }

@@ -46,13 +46,13 @@ h2 {
 }
 
 /***********************Task Items***********************/
-.tasks {
+#tasks {
 	list-style: none;
 	padding-left: 0;
 	margin: 0;
 }
 
-.tasks li {
+#tasks li {
 	border-bottom: solid black;
 	display: flex;
 	justify-content: space-between;
@@ -65,27 +65,34 @@ input[type="checkbox"] {
 }
 
 /***********************FILTERS***********************/
-.filters {
+
+.filters-wrapper {
 	display: flex;
 	justify-content: space-between;
-	padding: 1em;
+	padding: 0.5em;
+}
+
+#filters {
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-around;
 }
 
 /***********************ADD TASK***********************/
-section form {
+#addTask {
 	width: 100%;
 	display: flex;
 	align-items: center;
 }
 
-form label {
+#addTask label {
 	flex-grow: 1;
 }
 
-form button {
+#addTask button {
 	margin-left: 0.2em;
 }
 
-#task-input {
+#taskInput {
 	width: 100%;
 }
