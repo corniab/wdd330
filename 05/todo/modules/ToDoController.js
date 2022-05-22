@@ -2,12 +2,15 @@ import { ToDoModel } from "./ToDoModel.js";
 import { ToDoView } from "./ToDoView.js";
 
 export class ToDoController {
-	constructor(parentId) {
+	constructor(parentId, filterId) {
 		this.toDoModel = new ToDoModel("tasks");
 		this.toDoView = new ToDoView(parentId);
+		this.filterId = filterId;
 	}
 
-	showToDos(tasks = this.toDoModel.getAllTasks()) {
+	showToDos() {
+		let checked = document.forms[this.filterId].querySelector("input[name=filter]:checked");
+		const tasks = this.toDoModel.getFilteredTasks(checked.id, "completed");
 		this.toDoView.renderToDoList(tasks);
 	}
 
@@ -38,20 +41,10 @@ export class ToDoController {
 		});
 	}
 
-	filtersListener(elementId) {
-		document.getElementById(elementId).addEventListener("click", (e) => {
-			switch (e.target.id) {
-				case "all":
-					console.log("all");
-					break;
-				case "active":
-					console.log("active");
-					break;
-				case "completed":
-					console.log("completed");
-					break;
-				default:
-					break;
+	filtersListener(filterId) {
+		document.getElementById(filterId).addEventListener("click", (e) => {
+			if (e.target.type == "radio") {
+				this.showToDos();
 			}
 		});
 	}

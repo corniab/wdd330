@@ -25,9 +25,18 @@ export class ToDoModel {
 		localStorage.setItem(this.arrayName, JSON.stringify(tasks));
 	}
 
-	getFilteredTasks(filter, value) {
+	getFilteredTasks(filter, key) {
 		let tasks = JSON.parse(localStorage.getItem(this.arrayName));
-		return tasks.filter((task) => task[filter] == value);
+		switch (filter) {
+			case "all":
+				return tasks;
+			case "active":
+				return tasks.filter((task) => task[key] == false);
+			case "completed":
+				return tasks.filter((task) => task[key] == true);
+			default:
+				break;
+		}
 	}
 
 	updateTask(timestamp, completed) {
