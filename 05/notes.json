@@ -11,12 +11,7 @@
 				"You can check for browser support of a particular api by checking if it exists and then calling it.",
 				"Errors include: EvalError, RangeError, ReferenceError, SyntaxError, TypeError, URIError, InternalError"
 			],
-			"links": [
-				{
-					"url": "todo/index.html",
-					"description": "ToDo App"
-				}
-			]
+			"links": []
 		},
 		{
 			"url": "todo/index.html",
