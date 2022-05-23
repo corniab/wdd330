@@ -57,7 +57,6 @@ export class ToDoController {
 		let countEl = document.getElementById(this.countId);
 		let plural = document.getElementById("task-plural");
 		countEl.textContent = this.toDoModel.getFilteredTasks("active").length;
-		console.log(Number(countEl.textContent));
 		if (Number(countEl.textContent) != 1) {
 			plural.textContent = "s";
 		} else {

@@ -3,9 +3,9 @@ export class ToDoModel {
 		this.arrayName = arrayName;
 		if (localStorage.getItem("tasks") == null) {
 			localStorage.setItem(arrayName, JSON.stringify([]));
-			this.addTask({ timestamp: "1", content: "hello", completed: false });
+			this.addTask({ timestamp: "1", content: "Build a boat...", completed: false });
 		} else if (JSON.parse(localStorage.getItem("tasks")).length < 1) {
-			this.addTask({ timestamp: "1", content: "hello", completed: false });
+			this.addTask({ timestamp: "1", content: "Build a boat...", completed: false });
 		}
 	}
 
