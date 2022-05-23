@@ -27,11 +27,22 @@ export class ToDoController {
 		});
 	}
 
-	deleteTaskListener(listElementId) {
+	updateTaskListener(listElementId) {
 		document.getElementById(listElementId).addEventListener("click", (e) => {
 			if (e.target.className == "delete") {
-				this.toDoModel.removeTask(e.target.parentNode.id);
+				this.toDoModel.removeTask(e.target.parentNode.parentNode.id);
 				this.showToDos();
+			} else if (e.target.className == "edit-img") {
+				console.log("edit clicked");
+				this.toDoView.renderEditTask();
+			}
+		});
+	}
+
+	hideTaskListener(listElementId) {
+		document.getElementById(listElementId).addEventListener("click", (e) => {
+			if (e.target.className == "cancel") {
+				this.toDoView.hideEditTask();
 			}
 		});
 	}
