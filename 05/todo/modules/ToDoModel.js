@@ -19,6 +19,24 @@ export class ToDoModel {
 		return JSON.parse(localStorage.getItem(this.arrayName));
 	}
 
+	getSingleTask(timestamp) {
+		let tasks = JSON.parse(localStorage.getItem(this.arrayName));
+		let task = tasks.find((task) => (task.timestamp = timestamp));
+		return task;
+	}
+
+	updateSingleTask(timestamp, content) {
+		let tasks = JSON.parse(localStorage.getItem(this.arrayName));
+		tasks = tasks.map((task) => {
+			if (task.timestamp == timestamp) {
+				task.content = content;
+				return task;
+			}
+			return task;
+		});
+		localStorage.setItem(this.arrayName, JSON.stringify(tasks));
+	}
+
 	removeTask(timestamp) {
 		let tasks = JSON.parse(localStorage.getItem(this.arrayName));
 		tasks = tasks.filter((task) => task.timestamp != timestamp);

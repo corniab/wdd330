@@ -124,7 +124,7 @@ img {
 
 #editTask,
 .edit-btns,
-#edit-input {
+#editInput {
 	width: 100%;
 }
 
@@ -140,4 +140,8 @@ img {
 
 .hide {
 	display: none;
+}
+
+.edit-img {
+	pointer-events: none;
 }

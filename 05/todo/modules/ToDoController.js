@@ -27,21 +27,39 @@ export class ToDoController {
 		});
 	}
 
-	updateTaskListener(listElementId) {
+	deleteTaskListener(listElementId) {
 		document.getElementById(listElementId).addEventListener("click", (e) => {
 			if (e.target.className == "delete") {
 				this.toDoModel.removeTask(e.target.parentNode.parentNode.id);
 				this.showToDos();
-			} else if (e.target.className == "edit-img") {
-				console.log("edit clicked");
-				this.toDoView.renderEditTask();
 			}
+		});
+	}
+
+	editTaskListener(listElementId) {
+		document.getElementById(listElementId).addEventListener("click", (e) => {
+			if (e.target.className == "edit") {
+				e.preventDefault();
+				let task = this.toDoModel.getSingleTask(e.target.parentNode.parentNode.id);
+				this.toDoView.renderEditTask(task.content, task.timestamp);
+			}
+		});
+	}
+
+	updateTaskListener(formId) {
+		const form = document.forms[formId];
+		form.addEventListener("submit", (e) => {
+			e.preventDefault();
+			this.toDoModel.updateSingleTask(form.getAttribute("timestamp"), form.editInput.value);
+			this.toDoView.hideEditTask();
+			this.showToDos();
 		});
 	}
 
 	hideTaskListener(listElementId) {
 		document.getElementById(listElementId).addEventListener("click", (e) => {
 			if (e.target.className == "cancel") {
+				e.preventDefault();
 				this.toDoView.hideEditTask();
 			}
 		});

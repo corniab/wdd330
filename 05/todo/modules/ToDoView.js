@@ -23,13 +23,17 @@ export class ToDoView {
 		});
 	}
 
-	renderEditTask(task) {
-		document.querySelector(".task-main").classList.add("hide");
-		document.querySelector(".edit-popup").classList.remove("hide");
+	renderEditTask(content, timestamp) {
+		document.querySelector(".task-main").classList.toggle("hide");
+		document.querySelector(".edit-popup").classList.toggle("hide");
+
+		let form = document.forms.editTask;
+		form.editInput.value = content;
+		form.setAttribute("timestamp", timestamp);
 	}
 
 	hideEditTask() {
-		document.querySelector(".edit-popup").classList.add("hide");
-		document.querySelector(".task-main").classList.remove("hide");
+		document.querySelector(".edit-popup").classList.toggle("hide");
+		document.querySelector(".task-main").classList.toggle("hide");
 	}
 }
