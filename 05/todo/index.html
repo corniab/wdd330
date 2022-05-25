@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<h2>To Do</h2>
-		<section>
+		<section class="task-main">
 			<div class="task-view">
 				<ul id="tasks"></ul>
 				<div class="filters-wrapper">
@@ -27,6 +27,18 @@
 					<input type="text" name="task-input" id="taskInput" placeholder="Get to the promised land..." />
 				</label>
 				<button type="submit">+</button>
+			</form>
+		</section>
+		<section class="edit-popup hide">
+			<h2>Edit Task</h2>
+			<form id="editTask">
+				<label for="editInput">
+					<input type="text" name="editInput" id="editInput" />
+				</label>
+				<div class="edit-btns">
+					<button class="update-task">Update</button>
+					<button class="cancel">Cancel</button>
+				</div>
 			</form>
 		</section>
 		<script type="module" src="index.js"></script>

@@ -3,7 +3,8 @@ const controller = new ToDoController("tasks", "filters", "task-count");
 controller.showToDos();
 controller.addTaskListener("addTask");
 controller.deleteTaskListener("tasks");
+controller.editTaskListener("tasks");
 controller.completedTaskListener("tasks");
 controller.filtersListener("filters");
-
-// localStorage.clear();
+controller.hideTaskListener("editTask");
+controller.updateTaskListener("editTask");

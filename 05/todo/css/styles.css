@@ -96,3 +96,56 @@ input[type="checkbox"] {
 #taskInput {
 	width: 100%;
 }
+
+.edit,
+.delete {
+	width: 25px;
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 0.2em;
+}
+
+.note-btns {
+	display: flex;
+}
+
+img {
+	width: 15px;
+	height: 15px;
+}
+
+/***********************EDIT TASK***********************/
+.edit-popup {
+	display: flex;
+	min-height: 10em;
+}
+
+#editTask,
+.edit-btns,
+#editInput {
+	width: 100%;
+}
+
+.edit-btns {
+	display: flex;
+	justify-content: center;
+}
+
+.update-task,
+.cancel {
+	margin: 0.2em;
+}
+
+.hide {
+	display: none;
+}
+
+.edit-img {
+	pointer-events: none;
+}
+
+.strikethrough {
+	text-decoration: line-through;
+}

@@ -30,8 +30,37 @@ export class ToDoController {
 	deleteTaskListener(listElementId) {
 		document.getElementById(listElementId).addEventListener("click", (e) => {
 			if (e.target.className == "delete") {
-				this.toDoModel.removeTask(e.target.parentNode.id);
+				this.toDoModel.removeTask(e.target.parentNode.parentNode.id);
 				this.showToDos();
+			}
+		});
+	}
+
+	editTaskListener(listElementId) {
+		document.getElementById(listElementId).addEventListener("click", (e) => {
+			if (e.target.className == "edit") {
+				e.preventDefault();
+				let task = this.toDoModel.getSingleTask(e.target.parentNode.parentNode.id);
+				this.toDoView.renderEditTask(task.content, task.timestamp);
+			}
+		});
+	}
+
+	updateTaskListener(formId) {
+		const form = document.forms[formId];
+		form.addEventListener("submit", (e) => {
+			e.preventDefault();
+			this.toDoModel.updateSingleTask(form.getAttribute("timestamp"), form.editInput.value);
+			this.toDoView.hideEditTask();
+			this.showToDos();
+		});
+	}
+
+	hideTaskListener(listElementId) {
+		document.getElementById(listElementId).addEventListener("click", (e) => {
+			if (e.target.className == "cancel") {
+				e.preventDefault();
+				this.toDoView.hideEditTask();
 			}
 		});
 	}
