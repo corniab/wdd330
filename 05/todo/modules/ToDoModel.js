@@ -21,7 +21,7 @@ export class ToDoModel {
 
 	getSingleTask(timestamp) {
 		let tasks = JSON.parse(localStorage.getItem(this.arrayName));
-		let task = tasks.find((task) => (task.timestamp = timestamp));
+		let task = tasks.find((task) => task.timestamp == timestamp);
 		return task;
 	}
 

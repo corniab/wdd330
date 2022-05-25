@@ -6,11 +6,11 @@ export class ToDoView {
 	renderToDoList(taskList) {
 		document.getElementById(this.listElementId).innerHTML = "";
 		taskList.forEach((task) => {
-			let checked = task.completed ? "checked" : "";
+			let checked = task.completed ? ["checked", "class='strikethrough'"] : ["", ""];
 			let listItem = `
 			<li id="${task.timestamp}">
-				<label>
-					<input type="checkbox" ${checked}/>
+				<label ${checked[1]}>
+					<input type="checkbox" ${checked[0]}/>
 					${task.content}
 				</label>
 				<div class="note-btns">

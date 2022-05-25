@@ -145,3 +145,7 @@ img {
 .edit-img {
 	pointer-events: none;
 }
+
+.strikethrough {
+	text-decoration: line-through;
+}

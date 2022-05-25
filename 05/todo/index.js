@@ -8,5 +8,3 @@ controller.completedTaskListener("tasks");
 controller.filtersListener("filters");
 controller.hideTaskListener("editTask");
 controller.updateTaskListener("editTask");
-
-// localStorage.clear();
