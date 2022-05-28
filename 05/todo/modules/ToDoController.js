@@ -10,6 +10,7 @@ export class ToDoController {
 	}
 
 	showToDos() {
+		// Get the filter that is currently checked ["All", "Active", "Complete"]
 		let checked = document.forms[this.filterId].querySelector("input[name=filter]:checked");
 		const tasks = this.toDoModel.getFilteredTasks(checked.id, "completed");
 		this.toDoView.renderToDoList(tasks);
@@ -19,15 +20,22 @@ export class ToDoController {
 	}
 
 	addTaskListener(formId) {
+		// Create an event listener for adding tasks.
 		const form = document.forms[formId];
 		form.addEventListener("submit", (e) => {
 			e.preventDefault();
-			this.toDoModel.addTask({ timestamp: new Date(), content: form.taskInput.value, completed: false });
+			this.toDoModel.addTask({
+				id: this.createId(),
+				content: form.taskInput.value,
+				completed: false,
+				timestamp: new Date(),
+			});
 			this.showToDos();
 		});
 	}
 
 	deleteTaskListener(listElementId) {
+		// Create an event listener for deleting tasks.
 		document.getElementById(listElementId).addEventListener("click", (e) => {
 			if (e.target.className == "delete") {
 				this.toDoModel.removeTask(e.target.parentNode.parentNode.id);
@@ -37,11 +45,14 @@ export class ToDoController {
 	}
 
 	editTaskListener(listElementId) {
+		// Create an event listener for editing tasks.
 		document.getElementById(listElementId).addEventListener("click", (e) => {
 			if (e.target.className == "edit") {
 				e.preventDefault();
+				// The id of the list item, a list item, is the "grandparent" of the edit button.
+				// The id is assigned to the list item in the view controller.
 				let task = this.toDoModel.getSingleTask(e.target.parentNode.parentNode.id);
-				this.toDoView.renderEditTask(task.content, task.timestamp);
+				this.toDoView.renderEditTask(task.content, task.id);
 			}
 		});
 	}
@@ -50,7 +61,7 @@ export class ToDoController {
 		const form = document.forms[formId];
 		form.addEventListener("submit", (e) => {
 			e.preventDefault();
-			this.toDoModel.updateSingleTask(form.getAttribute("timestamp"), form.editInput.value);
+			this.toDoModel.updateSingleTask(form.id, form.editInput.value);
 			this.toDoView.hideEditTask();
 			this.showToDos();
 		});
@@ -90,6 +101,24 @@ export class ToDoController {
 			plural.textContent = "s";
 		} else {
 			plural.textContent = "";
+		}
+	}
+
+	createId() {
+		this.toDoModel.incrementId();
+		return this.toDoModel.getId();
+	}
+
+	addTaskIfEmpty() {
+		// Add a task to the model if its empty.
+		let tasks = this.toDoModel.getAllTasks();
+		if (tasks.length < 1) {
+			this.toDoModel.addTask({
+				id: this.createId(),
+				content: "Add a new task...",
+				completed: false,
+				timestamp: new Date(),
+			});
 		}
 	}
 }

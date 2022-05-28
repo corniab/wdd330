@@ -8,7 +8,7 @@ export class ToDoView {
 		taskList.forEach((task) => {
 			let checked = task.completed ? ["checked", "class='strikethrough'"] : ["", ""];
 			let listItem = `
-			<li id="${task.timestamp}">
+			<li id="${task.id}">
 				<label ${checked[1]}>
 					<input type="checkbox" ${checked[0]}/>
 					${task.content}
@@ -23,13 +23,13 @@ export class ToDoView {
 		});
 	}
 
-	renderEditTask(content, timestamp) {
+	renderEditTask(content, id) {
 		document.querySelector(".task-main").classList.toggle("hide");
 		document.querySelector(".edit-popup").classList.toggle("hide");
 
 		let form = document.forms.editTask;
 		form.editInput.value = content;
-		form.setAttribute("timestamp", timestamp);
+		form.setAttribute("id", id);
 	}
 
 	hideEditTask() {

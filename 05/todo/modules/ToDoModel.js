@@ -1,11 +1,11 @@
 export class ToDoModel {
 	constructor(arrayName) {
 		this.arrayName = arrayName;
+		// Create the tasks array in local storage if it does not exist.
+		// key: "tasks" value: {id: 1, content: "This is content", completed: False}
 		if (localStorage.getItem("tasks") == null) {
 			localStorage.setItem(arrayName, JSON.stringify([]));
-			this.addTask({ timestamp: "1", content: "Build a boat...", completed: false });
-		} else if (JSON.parse(localStorage.getItem("tasks")).length < 1) {
-			this.addTask({ timestamp: "1", content: "Build a boat...", completed: false });
+			localStorage.setItem("taskId", "0");
 		}
 	}
 
@@ -19,16 +19,16 @@ export class ToDoModel {
 		return JSON.parse(localStorage.getItem(this.arrayName));
 	}
 
-	getSingleTask(timestamp) {
+	getSingleTask(id) {
 		let tasks = JSON.parse(localStorage.getItem(this.arrayName));
-		let task = tasks.find((task) => task.timestamp == timestamp);
+		let task = tasks.find((task) => task.id == id);
 		return task;
 	}
 
-	updateSingleTask(timestamp, content) {
+	updateSingleTask(id, content) {
 		let tasks = JSON.parse(localStorage.getItem(this.arrayName));
 		tasks = tasks.map((task) => {
-			if (task.timestamp == timestamp) {
+			if (task.id == id) {
 				task.content = content;
 				return task;
 			}
@@ -37,13 +37,13 @@ export class ToDoModel {
 		localStorage.setItem(this.arrayName, JSON.stringify(tasks));
 	}
 
-	removeTask(timestamp) {
+	removeTask(id) {
 		let tasks = JSON.parse(localStorage.getItem(this.arrayName));
-		tasks = tasks.filter((task) => task.timestamp != timestamp);
+		tasks = tasks.filter((task) => task.id != id);
 		localStorage.setItem(this.arrayName, JSON.stringify(tasks));
 	}
 
-	getFilteredTasks(filter, key = "completed") {
+	getFilteredTasks(filter, key) {
 		let tasks = JSON.parse(localStorage.getItem(this.arrayName));
 		switch (filter) {
 			case "all":
@@ -57,15 +57,25 @@ export class ToDoModel {
 		}
 	}
 
-	updateTask(timestamp, completed) {
+	updateTask(id, completed) {
 		let tasks = JSON.parse(localStorage.getItem(this.arrayName));
 		tasks = tasks.map((task) => {
-			if (task.timestamp == timestamp) {
+			if (task.id == id) {
 				task.completed = completed;
 				return task;
 			}
 			return task;
 		});
 		localStorage.setItem(this.arrayName, JSON.stringify(tasks));
+	}
+
+	incrementId() {
+		let taskId = Number(localStorage.getItem("taskId"));
+		taskId++;
+		localStorage.setItem("taskId", taskId);
+	}
+
+	getId() {
+		return Number(localStorage.getItem("taskId"));
 	}
 }
