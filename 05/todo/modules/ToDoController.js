@@ -49,7 +49,7 @@ export class ToDoController {
 		document.getElementById(listElementId).addEventListener("click", (e) => {
 			if (e.target.className == "edit") {
 				e.preventDefault();
-				// The id of the list item, a list item, is the "grandparent" of the edit button.
+				// The id of the list item is the "grandparent" of the edit button.
 				// The id is assigned to the list item in the view controller.
 				let task = this.toDoModel.getSingleTask(e.target.parentNode.parentNode.id);
 				this.toDoView.renderEditTask(task.content, task.id);
@@ -58,16 +58,18 @@ export class ToDoController {
 	}
 
 	updateTaskListener(formId) {
+		// Create an event listener for updating tasks.
 		const form = document.forms[formId];
 		form.addEventListener("submit", (e) => {
 			e.preventDefault();
-			this.toDoModel.updateSingleTask(form.id, form.editInput.value);
+			this.toDoModel.updateSingleTask(form.getAttribute("taskNum"), form.editInput.value);
 			this.toDoView.hideEditTask();
 			this.showToDos();
 		});
 	}
 
 	hideTaskListener(listElementId) {
+		// Create an event listener for hiding the update form.
 		document.getElementById(listElementId).addEventListener("click", (e) => {
 			if (e.target.className == "cancel") {
 				e.preventDefault();
@@ -77,6 +79,7 @@ export class ToDoController {
 	}
 
 	completedTaskListener(listElementId) {
+		// Create an event listener for task checkboxes.
 		document.getElementById(listElementId).addEventListener("click", (e) => {
 			if (e.target.type === "checkbox") {
 				this.toDoModel.updateTask(e.target.parentNode.parentNode.id, e.target.checked);
@@ -86,6 +89,7 @@ export class ToDoController {
 	}
 
 	filtersListener(filterId) {
+		// Create an event listener for filter radio buttons.
 		document.getElementById(filterId).addEventListener("click", (e) => {
 			if (e.target.type == "radio") {
 				this.showToDos();
@@ -94,6 +98,7 @@ export class ToDoController {
 	}
 
 	updateCount() {
+		// Update the count of active tasks.
 		let countEl = document.getElementById(this.countId);
 		let plural = document.getElementById("task-plural");
 		countEl.textContent = this.toDoModel.getFilteredTasks("active").length;
@@ -105,6 +110,7 @@ export class ToDoController {
 	}
 
 	createId() {
+		// Create a new id.
 		this.toDoModel.incrementId();
 		return this.toDoModel.getId();
 	}

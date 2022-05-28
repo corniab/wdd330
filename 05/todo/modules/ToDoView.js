@@ -27,9 +27,9 @@ export class ToDoView {
 		document.querySelector(".task-main").classList.toggle("hide");
 		document.querySelector(".edit-popup").classList.toggle("hide");
 
-		let form = document.forms.editTask;
+		let form = document.forms["editTask"];
 		form.editInput.value = content;
-		form.setAttribute("id", id);
+		form.setAttribute("taskNum", id);
 	}
 
 	hideEditTask() {
