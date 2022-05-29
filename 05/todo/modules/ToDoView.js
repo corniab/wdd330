@@ -15,7 +15,7 @@ export class ToDoView {
 				</label>
 				<div class="note-btns">
 					<button class="edit"><img src="edit.svg" class="edit-img"></img></button>
-					<button class="delete">X</button>
+					<button class="delete"><img src="delete.svg" class="edit-img"></button>
 				</div>
 			</li>
 			`;
