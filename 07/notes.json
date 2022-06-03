@@ -1,0 +1,42 @@
+{
+	"pages": [
+		{
+			"url": "further-functions/index.html",
+			"description": "Further Functions",
+			"notes": [],
+			"links": [
+				{
+					"url": "",
+					"description": ""
+				}
+			]
+		},
+		{
+			"url": "ajax/index.html",
+			"description": "Ajax",
+			"notes": [
+				"Ajax allows for asynchronous communication with a server an dynamically updates pages without reloading them.",
+				"Same origin policy blocks all requests from a domain that is different from the page making the request. Prevents malicious JavaScript from being run from an external source.",
+				"CORS (Cross Origin Resoure Sharing) uses HTTP headers to indicate friendly websites from which resources can be requested.",
+				""
+			],
+			"links": [
+				{
+					"url": "exampleAjax/ajax.html",
+					"description": "Ajax example."
+				}
+			]
+		},
+		{
+			"url": "",
+			"description": "",
+			"notes": [],
+			"links": [
+				{
+					"url": "",
+					"description": ""
+				}
+			]
+		}
+	]
+}
