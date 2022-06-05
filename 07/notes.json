@@ -3,11 +3,13 @@
 		{
 			"url": "further-functions/index.html",
 			"description": "Further Functions",
-			"notes": [],
+			"notes": [
+				""
+			],
 			"links": [
 				{
-					"url": "",
-					"description": ""
+					"url": "exampleFuncs/index.html",
+					"description": "Further Functions Examples"
 				}
 			]
 		},
