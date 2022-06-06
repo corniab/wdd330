@@ -26,6 +26,10 @@ const weeks = [
 		description: "07",
 	},
 	{
+		url: "08/index.html",
+		description: "08",
+	},
+	{
 		url: "x/index.html",
 		description: "x",
 	},

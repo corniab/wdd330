@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Transforms and Transitions Notes</title>
+		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+		<link rel="stylesheet" href="../../css/styles.css" />
+		<link rel="stylesheet" href="../../css/template.css" />
+		<link rel="stylesheet" href="../../css/week.css" />
+		<style>
+			.animate-container {
+				position: relative;
+				width: 500px;
+				height: 500px;
+				border: solid black 2px;
+			}
+
+			#right,
+			#down,
+			#up {
+				display: block;
+				width: 50px;
+				height: 50px;
+				transition: all 1s ease-in-out 50ms;
+			}
+
+			#up {
+				background-color: green;
+				position: absolute;
+				bottom: 0;
+			}
+
+			#right {
+				background-color: blue;
+			}
+
+			#down {
+				position: absolute;
+				top: 0;
+				right: 0;
+				background-color: red;
+			}
+
+			#right:hover {
+				transform: translateX(446px) translateY(446px) rotate(180deg);
+				background-color: pink;
+				border-radius: 5px 50%;
+			}
+
+			#down:hover {
+				transform: translateY(446px);
+			}
+
+			#up:hover {
+				transform: translateX(433.5px) translateY(-12.5px) scale(1.5);
+			}
+		</style>
+	</head>
+	<body>
+		<header></header>
+		<nav></nav>
+		<main>
+			<div class="section-wrapper">
+				<section class="notes">
+					<h2>Notes</h2>
+					<ul class="notes-list"></ul>
+				</section>
+				<section class="links">
+					<h2>Links</h2>
+					<ul class="links-list"></ul>
+				</section>
+				<section class="application">
+					<h2>Application</h2>
+					<div class="animate-container">
+						<div id="right"></div>
+						<div id="down"></div>
+						<div id="up"></div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<footer></footer>
+		<script type="module" src="../../snippets/header.js"></script>
+		<script type="module" src="../../snippets/nav.js"></script>
+		<script type="module" src="../../snippets/footer.js"></script>
+		<script type="module" src="../../modules/notes.js"></script>
+		<script type="module" src=".....js"></script>
+	</body>
+</html>
