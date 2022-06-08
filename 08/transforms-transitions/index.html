@@ -15,15 +15,17 @@
 				width: 500px;
 				height: 500px;
 				border: solid black 2px;
+				margin-bottom: 1em;
 			}
 
 			#right,
 			#down,
-			#up {
+			#up,
+			#hoop {
 				display: block;
 				width: 50px;
 				height: 50px;
-				transition: all 1s ease-in-out 50ms;
+				transition: all 2s ease-in-out 50ms;
 			}
 
 			#up {
@@ -50,11 +52,49 @@
 			}
 
 			#down:hover {
-				transform: translateY(446px);
+				transform: translateY(446px) rotateY(180deg);
 			}
 
 			#up:hover {
 				transform: translateX(433.5px) translateY(-12.5px) scale(1.5);
+				border-radius: 100%;
+			}
+
+			#hoop-path {
+				background-color: red;
+				height: 100%;
+				width: 100%;
+				border-radius: 100% 0 0 0;
+			}
+
+			#leg {
+				position: absolute;
+				bottom: -2px;
+				left: 24px;
+				border-bottom: solid 2px blue;
+				width: 472px;
+				transform-origin: 472px 0px;
+				transition: 3s;
+				transform: rotate(1.7deg);
+			}
+
+			#leg:hover {
+				transform: rotate(88.15deg);
+			}
+
+			#ball {
+				position: inherit;
+				bottom: -14.9px;
+				left: -24px;
+				background-color: blue;
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				transition: all 2.85s ease-in-out;
+			}
+			#ball:hover {
+				background-color: yellow;
+				transform: rotateX(1800deg);
 			}
 		</style>
 	</head>
@@ -73,11 +113,17 @@
 				</section>
 				<section class="application">
 					<h2>Application</h2>
+					<p>Hover your mouse over the squares to see their effects.</p>
 					<div class="animate-container">
 						<div id="right"></div>
 						<div id="down"></div>
 						<div id="up"></div>
 					</div>
+					<div class="animate-container">
+						<div id="hoop-path"></div>
+						<div id="leg"><div id="ball"></div></div>
+					</div>
+					<p>Hover over the blue ball.</p>
 				</section>
 			</div>
 		</main>
