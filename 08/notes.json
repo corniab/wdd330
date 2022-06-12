@@ -3,7 +3,7 @@
 		{
 			"url": "transforms-transitions/index.html",
 			"description": "Transforms and Transitions",
-			"notes": [],
+			"notes": ["Animations give you more granular control over the state of elements in transition."],
 			"links": [
 				{
 					"url": "https://css-tricks.com/the-shapes-of-css/",
@@ -12,8 +12,8 @@
 			]
 		},
 		{
-			"url": "",
-			"description": "",
+			"url": "canvas/index.html",
+			"description": "Canvas",
 			"notes": [],
 			"links": [
 				{
