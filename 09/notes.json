@@ -1,0 +1,28 @@
+{
+	"pages": [
+		{
+			"url": "window/index.html",
+			"description": "Window Object Notes",
+			"notes": [
+				"Browser Object Model is a collection of properties and methods that contain information about the browser and computer screen"
+			],
+			"links": [
+				{
+					"url": "",
+					"description": ""
+				}
+			]
+		},
+		{
+			"url": "API/index.html",
+			"description": "HTML5 API Notes",
+			"notes": [],
+			"links": [
+				{
+					"url": "",
+					"description": ""
+				}
+			]
+		}
+	]
+}
