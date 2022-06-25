@@ -4,11 +4,18 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>" " Notes</title>
+		<title>Fetch Notes</title>
 		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
 		<link rel="stylesheet" href="../../css/styles.css" />
 		<link rel="stylesheet" href="../../css/template.css" />
 		<link rel="stylesheet" href="../../css/week.css" />
+		<style>
+			label,
+			input {
+				display: block;
+				margin-bottom: 0.5em;
+			}
+		</style>
 	</head>
 	<body>
 		<header></header>
@@ -25,7 +32,18 @@
 				</section>
 				<section class="application">
 					<h2>Application</h2>
-					<p>Take a look in the console!</p>
+					<br />
+					<br />
+					<br />
+					<h3>Submit a fetch request to obtain information about a word</h3>
+					<form id="fetchForm">
+						<label>
+							Enter a word:
+							<input type="text" name="wordReq" id="wordReq" required />
+						</label>
+						<button type="submit">Fetch Definitions</button>
+					</form>
+					<div id="fetchRes"></div>
 				</section>
 			</div>
 		</main>
@@ -34,6 +52,6 @@
 		<script type="module" src="../../snippets/nav.js"></script>
 		<script type="module" src="../../snippets/footer.js"></script>
 		<script type="module" src="../../modules/notes.js"></script>
-		<script type="module" src=".....js"></script>
+		<script type="module" src="main.js"></script>
 	</body>
 </html>
