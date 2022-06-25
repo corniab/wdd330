@@ -4,11 +4,29 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>" " Notes</title>
+		<title>Form Validation Notes</title>
 		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
 		<link rel="stylesheet" href="../../css/styles.css" />
 		<link rel="stylesheet" href="../../css/template.css" />
 		<link rel="stylesheet" href="../../css/week.css" />
+		<style>
+			input,
+			label {
+				display: block;
+			}
+
+			input:invalid {
+				border: 2px dashed red;
+			}
+
+			input:valid {
+				border: 2px solid green;
+			}
+
+			input:invalid:required {
+				background-image: linear-gradient(to right, lightblue, pink);
+			}
+		</style>
 	</head>
 	<body>
 		<header></header>
@@ -25,7 +43,32 @@
 				</section>
 				<section class="application">
 					<h2>Application</h2>
-					<p>Take a look in the console!</p>
+					<br />
+					<br />
+					<h3>Client Side Validation Example</h3>
+					<form id="simpleForm">
+						<label>
+							Would you prefer a banana or cherry?
+							<input type="text" name="fruitPreference" id="fruitPreference" required pattern="[Bb]anana|[Cc]herry" />
+						</label>
+						<label>
+							How many would you like?
+							<input type="number" name="fruitCount" id="fruitCount" required value="1" min="1" max="10" />
+						</label>
+						<button>Pick My Favorite Fruit</button>
+					</form>
+					<br />
+					<br />
+					<br />
+					<br />
+					<h3>Constraint Validation API example</h3>
+					<form id="constraintForm">
+						<label>
+							I would like you to provide me with an e-mail address:
+							<input type="email" name="clientEmail" id="clientEmail" />
+						</label>
+						<button>Add my email</button>
+					</form>
 				</section>
 			</div>
 		</main>
@@ -34,6 +77,6 @@
 		<script type="module" src="../../snippets/nav.js"></script>
 		<script type="module" src="../../snippets/footer.js"></script>
 		<script type="module" src="../../modules/notes.js"></script>
-		<script type="module" src=".....js"></script>
+		<script type="module" src="main.js"></script>
 	</body>
 </html>
