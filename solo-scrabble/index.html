@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Solo Scrabble</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Open+Sans:wght@800&family=Racing+Sans+One&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+		<link rel="stylesheet" href="css/small.css" />
+		<link rel="stylesheet" href="css/large.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Solo Scrabble</h1>
+			<nav>
+				<ul id="navBar">
+					<li><a href="/solo-scrabble/index.html">Home</a></li>
+					<li><a href="/solo-scrabble/index.html">New Game</a></li>
+					<li><a id="rules">Rules</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div id="boardSection">
+				<div id="gameBoard"></div>
+			</div>
+			<section id="tilesSection">
+				<div>
+					<button id="quitBtn">Quit Game</button>
+					<button id="moveBtn">Check My Move</button>
+				</div>
+				<h2>Player Tiles</h2>
+				<div id="tilesInPlay"></div>
+				<ul>
+					<li>Current Score: <span id="currentScore"></span></li>
+					<li>Tiles Left: <span id="tilesLeft"></span></li>
+				</ul>
+			</section>
+			<section id="leaderBoardSection">
+				<h2>LeaderBoard</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Player</th>
+							<th>Score</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</section>
+		</main>
+		<footer>
+			<p>&copy;<span id="currentYear"></span> Ben Cornia</p>
+		</footer>
+		<script type="module" src="main.js"></script>
+	</body>
+</html>
