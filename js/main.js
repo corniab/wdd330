@@ -38,8 +38,8 @@ const weeks = [
 		description: "10",
 	},
 	{
-		url: "x/index.html",
-		description: "x",
+		url: "solo-scrabble/index.html",
+		description: "10: Final Project - Solo Scrabble.",
 	},
 ];
 
